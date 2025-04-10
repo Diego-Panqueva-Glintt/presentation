@@ -1,0 +1,46 @@
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="resumen_ejecutivo" language="java" columnCount="1" pageWidth="842" pageHeight="595" whenNoDataType="AllSectionsNoDetail" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="50c68f4f-1c37-4071-be51-1a36db193a9d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="postgresql.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="net.sf.jasperreports.data.adapter" value="postgresql.jrdax"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<query language="sql"><![CDATA[select * from dual]]></query>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dual"/>
+	</field>
+	<field name="dual" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dual"/>
+		<property name="com.jaspersoft.studio.field.label" value="dual"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dual"/>
+	</field>
+	<background height="595" splitType="Stretch">
+		<element kind="image" uuid="5e50ee23-2fa3-4a17-8400-182bcc0d6edd" x="0" y="0" width="842" height="595" scaleImage="FillFrame">
+			<expression><![CDATA["resumen_ejecutivo.png"]]></expression>
+		</element>
+		<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.spreadsheet.SpreadsheetLayout"/>
+	</background>
+	<title height="536" splitType="Stretch">
+		<element kind="staticText" uuid="dc48fd89-49b9-4704-804a-18a59de7d4b5" x="70" y="110" width="198" height="234" forecolor="#FFFFFF" fontSize="150.0" vTextAlign="Middle">
+			<text><![CDATA[1]]></text>
+		</element>
+		<element kind="staticText" uuid="23f44bc5-9bc8-4de3-9843-e5a2871301c0" x="310" y="160" width="490" height="150" forecolor="#FFFFFF" fontSize="50.0" vTextAlign="Middle">
+			<text><![CDATA[RESUMEN EJECUTIVO]]></text>
+		</element>
+		<element kind="staticText" uuid="edfb53e8-981b-494f-b13f-057b9c56ec23" x="680" y="35" width="100" height="30" forecolor="#AD80D0" fontSize="15.0" vTextAlign="Middle">
+			<text><![CDATA[Glintt Next]]></text>
+		</element>
+		<element kind="staticText" uuid="9753914b-3541-492c-9820-5152f04be175" x="680" y="495" width="100" height="30" fontSize="15.0" vTextAlign="Middle">
+			<text><![CDATA[Glintt Global]]></text>
+		</element>
+	</title>
+</jasperReport>

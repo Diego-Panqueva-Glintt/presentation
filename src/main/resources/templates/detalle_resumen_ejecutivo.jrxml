@@ -1,0 +1,277 @@
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="detalle_resumen_ejecutivo" language="java" columnCount="1" pageWidth="842" pageHeight="595" whenNoDataType="AllSectionsNoDetail" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2f4840ab-2175-40c0-a58c-ecd680e54974">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="postgresql.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="P_TITLE_DUMMY" class="java.lang.String"/>
+	<query language="sql"><![CDATA[SELECT 
+id,
+squat,
+profile,
+num_profile,
+name_contact,
+full_time,
+location,
+duration,
+company,
+team_assign,
+(select 
+sum(day_price * num_days)
+from price_total_day
+) total_investment,
+type_amount,
+destination_q
+FROM squat_profile]]></query>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="squat_profile"/>
+	</field>
+	<field name="squat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="squat"/>
+		<property name="com.jaspersoft.studio.field.label" value="squat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="squat_profile"/>
+	</field>
+	<field name="profile" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="profile"/>
+		<property name="com.jaspersoft.studio.field.label" value="profile"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="squat_profile"/>
+	</field>
+	<field name="num_profile" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="num_profile"/>
+		<property name="com.jaspersoft.studio.field.label" value="num_profile"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="squat_profile"/>
+	</field>
+	<field name="name_contact" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name_contact"/>
+		<property name="com.jaspersoft.studio.field.label" value="name_contact"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="squat_profile"/>
+	</field>
+	<field name="full_time" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="full_time"/>
+		<property name="com.jaspersoft.studio.field.label" value="full_time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="squat_profile"/>
+	</field>
+	<field name="location" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="location"/>
+		<property name="com.jaspersoft.studio.field.label" value="location"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="squat_profile"/>
+	</field>
+	<field name="duration" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="duration"/>
+		<property name="com.jaspersoft.studio.field.label" value="duration"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="squat_profile"/>
+	</field>
+	<field name="company" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="company"/>
+		<property name="com.jaspersoft.studio.field.label" value="company"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="squat_profile"/>
+	</field>
+	<field name="team_assign" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="team_assign"/>
+		<property name="com.jaspersoft.studio.field.label" value="team_assign"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="squat_profile"/>
+	</field>
+	<field name="total_investment" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="total_investment"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_investment"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="squat_profile"/>
+	</field>
+	<field name="type_amount" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="type_amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="type_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="squat_profile"/>
+	</field>
+	<field name="destination_q" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="destination_q"/>
+		<property name="com.jaspersoft.studio.field.label" value="destination_q"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="squat_profile"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="310" splitType="Stretch">
+		<element kind="textField" uuid="e89d4660-06c6-4f2f-92c5-0aeba13ae92e" mode="Opaque" x="0" y="0" width="842" height="30" forecolor="#AD80D0" backcolor="#CDC6CF" fontSize="12.0" vTextAlign="Middle">
+			<paragraph lineSpacingSize="0.0" leftIndent="20"/>
+			<expression><![CDATA[$P{P_TITLE_DUMMY}]]></expression>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+		</element>
+		<element kind="staticText" uuid="63623e00-fa82-40ea-a567-fea11c2d61e9" x="20" y="60" width="260" height="30" forecolor="#AD80D0" fontSize="22.0">
+			<text><![CDATA[RESUMEN EJECUTIVO]]></text>
+		</element>
+		<element kind="textField" uuid="b3b5b8d3-afc8-4170-a73e-acb75e88fc14" x="20" y="110" width="771" height="50">
+			<expression><![CDATA["En nombre de GLINTT NEXT, queremos agradecerle la oportunidad que nos ha brindado de presentar esta propuesta de trabajo a su Organización, con el fin de atender sus necesidades a la hora de afrontar el proyecto en cuestión:"+ $P{P_TITLE_DUMMY} +". GLINTT NEXT presenta la siguiente propuesta solicitada por "+$F{company}+"  para reforzar los "+$F{team_assign}]]></expression>
+		</element>
+		<element kind="textField" uuid="14e1b18c-654f-46a3-802b-02593dbcb727" x="20" y="160" width="771" height="30">
+			<expression><![CDATA["El importe total de la inversión es " + $F{total_investment}+ " " + $F{type_amount} +" "+"("+$F{destination_q}+")"]]></expression>
+		</element>
+		<element kind="textField" uuid="792318c7-6a2e-43bc-85be-a8f960ab191a" x="20" y="200" width="772" height="50">
+			<expression><![CDATA["Con el fin de establecer una estrecha relación con"+ $F{company}+" , GLINTT NEXT cree tener una alta capacidad de entrega, aliada a un enfoque permanente en la obtención de los resultados esperados, para buscar la mejor propuesta de valor en respuesta a sus solicitudes, y espera la oportunidad de trabajar con sus marcos para lograr las metas asumidas."]]></expression>
+		</element>
+		<element kind="staticText" uuid="1e45b731-b8a0-4f59-b541-9c67fc38525c" mode="Opaque" x="20" y="280" width="100" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Squad]]></text>
+			<box>
+				<pen lineWidth="1.0"/>
+				<topPen lineWidth="1.0" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineColor="#000000"/>
+				<bottomPen lineColor="#000000"/>
+				<rightPen lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="4c6987a7-aeaa-40b6-aaee-633261423c30" mode="Opaque" x="120" y="280" width="100" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Perfil]]></text>
+			<box>
+				<pen lineWidth="1.0"/>
+				<topPen lineWidth="1.0" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineColor="#000000"/>
+				<bottomPen lineColor="#000000"/>
+				<rightPen lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="9a2faa1b-6f8d-4228-8cfc-e350ce37c2fc" mode="Opaque" x="220" y="280" width="100" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Num. perfiles]]></text>
+			<box>
+				<pen lineWidth="1.0"/>
+				<topPen lineWidth="1.0" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineColor="#000000"/>
+				<bottomPen lineColor="#000000"/>
+				<rightPen lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="3eb582be-a18d-4217-a653-252bedbb16f0" mode="Opaque" x="320" y="280" width="130" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Contacto Servicio]]></text>
+			<box>
+				<pen lineWidth="1.0"/>
+				<topPen lineWidth="1.0" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineColor="#000000"/>
+				<bottomPen lineColor="#000000"/>
+				<rightPen lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="74a4f31a-2049-4062-b43c-06017507c0ab" mode="Opaque" x="450" y="280" width="80" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Dedicación]]></text>
+			<box>
+				<pen lineWidth="1.0"/>
+				<topPen lineWidth="1.0" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineColor="#000000"/>
+				<bottomPen lineColor="#000000"/>
+				<rightPen lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="cb391c02-4179-44ac-9c83-51c575c8d377" mode="Opaque" x="530" y="280" width="120" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Ubicación]]></text>
+			<box>
+				<pen lineWidth="1.0"/>
+				<topPen lineWidth="1.0" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineColor="#000000"/>
+				<bottomPen lineColor="#000000"/>
+				<rightPen lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="515c38e0-98f0-4418-ac59-8959f6a39ef3" mode="Opaque" x="650" y="280" width="141" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Duración]]></text>
+			<box>
+				<pen lineWidth="1.0"/>
+				<topPen lineWidth="1.0" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineColor="#000000"/>
+				<bottomPen lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="ff211687-04af-429c-9426-fc2cc9a3ed46" x="730" y="0" width="100" height="30" forecolor="#AD80D0" fontSize="15.0" vTextAlign="Middle">
+			<text><![CDATA[Glintt Next]]></text>
+		</element>
+	</title>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<element kind="textField" uuid="0fce3f0d-66d4-412c-b379-eee49684fdd9" x="20" y="0" width="100" height="30" fontSize="12.0" vTextAlign="Middle">
+				<paragraph rightIndent="2"/>
+				<expression><![CDATA[$F{squat}]]></expression>
+				<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="be69775a-94e4-4591-82b5-bcc298a05820" x="120" y="0" width="100" height="30" fontSize="12.0" vTextAlign="Middle">
+				<paragraph rightIndent="2"/>
+				<expression><![CDATA[$F{profile}]]></expression>
+				<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="71b8e74e-57a8-41a7-9c08-7fa54cbe175c" x="220" y="0" width="100" height="30" fontSize="12.0" vTextAlign="Middle">
+				<paragraph rightIndent="2"/>
+				<expression><![CDATA[$F{num_profile}]]></expression>
+				<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="3fb13254-32ee-40cd-acba-3710f23f2d4c" x="320" y="0" width="130" height="30" fontSize="10.0" vTextAlign="Middle">
+				<paragraph rightIndent="2"/>
+				<expression><![CDATA[$F{name_contact}]]></expression>
+				<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="8afa535c-42c9-4243-a445-51a37c13a789" x="450" y="0" width="80" height="30" fontSize="12.0" vTextAlign="Middle">
+				<paragraph rightIndent="2"/>
+				<expression><![CDATA[$F{full_time}]]></expression>
+				<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="5b2fa34b-8926-48ea-83fd-73dec3ee4b8f" x="530" y="0" width="120" height="30" fontSize="12.0" vTextAlign="Middle">
+				<paragraph rightIndent="2"/>
+				<expression><![CDATA[$F{location}]]></expression>
+				<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="a7516bf7-c8c6-41d8-adba-9f12022f56f7" x="650" y="0" width="141" height="30" fontSize="12.0" vTextAlign="Middle">
+				<paragraph rightIndent="2"/>
+				<expression><![CDATA[$F{duration}]]></expression>
+				<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<summary height="42">
+		<element kind="staticText" uuid="e30b2493-61bd-42d5-8936-e5b4d8eaae61" x="730" y="10" width="100" height="30" fontSize="15.0" vTextAlign="Middle">
+			<text><![CDATA[Glintt Global]]></text>
+		</element>
+	</summary>
+</jasperReport>

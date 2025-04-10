@@ -1,0 +1,54 @@
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="introduccion" language="java" columnCount="1" pageWidth="842" pageHeight="595" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="5aa841ef-8f22-4d17-8975-de25a24a387e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="postgresql.jrdax"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<query language="SQL"><![CDATA[select * from dual]]></query>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dual"/>
+	</field>
+	<field name="dual" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dual"/>
+		<property name="com.jaspersoft.studio.field.label" value="dual"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dual"/>
+	</field>
+	<group name="id">
+		<expression><![CDATA[$F{id}]]></expression>
+	</group>
+	<group name="dual">
+		<expression><![CDATA[$F{dual}]]></expression>
+	</group>
+	<background height="595" splitType="Stretch">
+		<element kind="image" uuid="3ac8db91-cfb2-4935-95b8-48ec45bc1da7" x="0" y="0" width="842" height="595" scaleImage="FillFrame" printRepeatedValues="false">
+			<expression><![CDATA["fondo_introduccion.png"]]></expression>
+		</element>
+	</background>
+	<title height="595" splitType="Stretch">
+		<element kind="staticText" uuid="139e6af2-9c81-4e13-ac77-be8c2ff4f7cb" x="70" y="110" width="198" height="234" forecolor="#FFFFFF" fontSize="150.0" vTextAlign="Middle">
+			<text><![CDATA[2]]></text>
+		</element>
+		<element kind="staticText" uuid="71734151-f63e-4935-a7e2-dd8135d20b93" x="293" y="109" width="490" height="111" forecolor="#FFFFFF" fontSize="50.0" vTextAlign="Middle">
+			<text><![CDATA[INTRODUCCIÓN]]></text>
+		</element>
+		<element kind="staticText" uuid="17738864-2fca-4f53-a30b-f12ed6de502a" x="680" y="35" width="100" height="30" forecolor="#AD80D0" fontSize="15.0" vTextAlign="Middle">
+			<text><![CDATA[Glintt Next]]></text>
+		</element>
+		<element kind="staticText" uuid="524306e6-e2cd-4ad9-84bf-ac470171486a" x="700" y="550" width="100" height="30" forecolor="#29BA7B" fontSize="15.0" vTextAlign="Middle">
+			<text><![CDATA[Glintt Global]]></text>
+		</element>
+		<element kind="staticText" uuid="47256995-d659-4d54-95da-7ca2abdc8051" x="293" y="230" width="490" height="80" forecolor="#FFFFFF" fontSize="16.0">
+			<text><![CDATA[a) ALCANCE Y OBJETIVOS
+b) FACTORES DIFERENCIADORES]]></text>
+		</element>
+	</title>
+</jasperReport>

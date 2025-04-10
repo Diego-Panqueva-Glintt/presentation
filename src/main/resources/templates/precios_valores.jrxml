@@ -1,0 +1,235 @@
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="precios_valores" language="java" columnCount="1" pageWidth="842" pageHeight="595" whenNoDataType="AllSectionsNoDetail" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="24526401-5e13-4dc5-9a4d-5bff74fd2849">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="postgresql.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="P_TITLE_DUMMY" forPrompting="false" class="java.lang.String"/>
+	<query language="sql"><![CDATA[select 
+month_price,
+name_contact,
+profile,
+day_price,
+num_days,
+q_year,
+sum(num_days * day_price) total_month
+from price_total_day
+group by month_price,
+name_contact,
+profile,
+day_price,
+num_days,
+q_year
+order by month_price,name_contact asc]]></query>
+	<field name="month_price" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="month_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="month_price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="price_total_day"/>
+	</field>
+	<field name="name_contact" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name_contact"/>
+		<property name="com.jaspersoft.studio.field.label" value="name_contact"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="price_total_day"/>
+	</field>
+	<field name="profile" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="profile"/>
+		<property name="com.jaspersoft.studio.field.label" value="profile"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="price_total_day"/>
+	</field>
+	<field name="day_price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="day_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="day_price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="price_total_day"/>
+	</field>
+	<field name="num_days" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="num_days"/>
+		<property name="com.jaspersoft.studio.field.label" value="num_days"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="price_total_day"/>
+	</field>
+	<field name="q_year" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="q_year"/>
+		<property name="com.jaspersoft.studio.field.label" value="q_year"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="price_total_day"/>
+	</field>
+	<field name="total_month" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="total_month"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_month"/>
+	</field>
+	<variable name="total_month1" calculation="Sum" class="java.math.BigDecimal">
+		<expression><![CDATA[$F{total_month}]]></expression>
+	</variable>
+	<background splitType="Stretch"/>
+	<title height="158" splitType="Stretch">
+		<element kind="textField" uuid="99434a14-4ef1-4116-b873-f04690504ddb" mode="Opaque" x="0" y="0" width="842" height="30" forecolor="#AD80D0" backcolor="#CDC6CF" fontSize="12.0" vTextAlign="Middle">
+			<paragraph lineSpacingSize="0.0" leftIndent="20"/>
+			<expression><![CDATA[$P{P_TITLE_DUMMY}]]></expression>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+		</element>
+		<element kind="staticText" uuid="5b45244e-db47-423d-9324-68d4fbf0a73e" x="20" y="45" width="510" height="30" forecolor="#AD80D0" fontSize="22.0">
+			<text><![CDATA[PRECIOS Y VALOR DE INVERSIÓN]]></text>
+		</element>
+		<element kind="staticText" uuid="dde448da-1456-4cbd-95f0-bf237013e991" x="730" y="0" width="100" height="30" forecolor="#AD80D0" fontSize="15.0" vTextAlign="Middle">
+			<text><![CDATA[Glintt Next]]></text>
+		</element>
+		<element kind="staticText" uuid="1529c89d-fe9e-44d3-ae1b-6e0666d032a0" mode="Opaque" x="60" y="127" width="100" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Mes]]></text>
+			<box>
+				<topPen lineWidth="1.0"/>
+				<leftPen lineWidth="1.0"/>
+				<bottomPen lineWidth="1.0"/>
+				<rightPen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="74c66037-069a-4a17-bc73-b3e1449c2b33" mode="Opaque" x="160" y="127" width="150" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Nombre]]></text>
+			<box>
+				<topPen lineWidth="1.0"/>
+				<leftPen lineWidth="1.0"/>
+				<bottomPen lineWidth="1.0"/>
+				<rightPen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="3931c1d4-82e7-4146-8d92-3b5a0eb383b0" mode="Opaque" x="310" y="127" width="100" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Perfil]]></text>
+			<box>
+				<topPen lineWidth="1.0"/>
+				<leftPen lineWidth="1.0"/>
+				<bottomPen lineWidth="1.0"/>
+				<rightPen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="112f731e-0506-4c35-b952-e15d575d394f" mode="Opaque" x="410" y="127" width="100" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Precio Día(€)]]></text>
+			<box>
+				<topPen lineWidth="1.0"/>
+				<leftPen lineWidth="1.0"/>
+				<bottomPen lineWidth="1.0"/>
+				<rightPen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="685a349b-38e2-48e9-8e0e-61e4336fd733" mode="Opaque" x="510" y="127" width="100" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[No. Días]]></text>
+			<box>
+				<topPen lineWidth="1.0"/>
+				<leftPen lineWidth="1.0"/>
+				<bottomPen lineWidth="1.0"/>
+				<rightPen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="4ff34580-36c7-4be1-b1ae-4c50cbe05dea" mode="Opaque" x="610" y="127" width="100" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Valor detallado]]></text>
+			<box>
+				<topPen lineWidth="1.0"/>
+				<leftPen lineWidth="1.0"/>
+				<bottomPen lineWidth="1.0"/>
+				<rightPen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="bb4399f3-0223-4304-bbac-88f7bcaea03d" x="61" y="80" width="649" height="30" fontSize="12.0" vTextAlign="Middle">
+			<expression><![CDATA["(*) Servicios Profesionales: En la siguiente tabla se presentan los costos totales asociados a " + $F{q_year}]]></expression>
+		</element>
+	</title>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<element kind="textField" uuid="64dbca0f-c8d4-4fa4-b3ff-6ba326c776bd" x="60" y="0" width="100" height="20" fontSize="12.0" vTextAlign="Middle">
+				<paragraph leftIndent="5"/>
+				<expression><![CDATA[$F{month_price}]]></expression>
+				<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="95c701ef-6034-481c-ac1a-eec004feb2d8" x="160" y="0" width="150" height="20" fontSize="12.0" vTextAlign="Middle">
+				<paragraph leftIndent="5"/>
+				<expression><![CDATA[$F{name_contact}]]></expression>
+				<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="84a60422-15d0-4c9a-90f9-c21a722d9426" x="310" y="0" width="100" height="20" fontSize="12.0" vTextAlign="Middle">
+				<paragraph leftIndent="5"/>
+				<expression><![CDATA[$F{profile}]]></expression>
+				<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="8fb29274-5c7a-4f93-af5c-f158eb329f18" x="410" y="0" width="100" height="20" fontSize="12.0" vTextAlign="Middle">
+				<paragraph leftIndent="5"/>
+				<expression><![CDATA[$F{day_price}]]></expression>
+				<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="7b38b843-5991-4f81-b0c6-ebf2536cdd0d" x="510" y="0" width="100" height="20" fontSize="12.0" vTextAlign="Middle">
+				<paragraph leftIndent="5"/>
+				<expression><![CDATA[$F{num_days}]]></expression>
+				<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="02773316-1ca6-40a3-b5d6-c7df8009b69e" x="610" y="0" width="100" height="20" fontSize="12.0" vTextAlign="Middle">
+				<paragraph leftIndent="5"/>
+				<expression><![CDATA[$F{total_month}]]></expression>
+				<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<summary height="130" splitType="Stretch">
+		<element kind="staticText" uuid="a0f85475-9db6-4c93-9e99-13247c4cd230" x="730" y="91" width="100" height="30" fontSize="15.0" vTextAlign="Middle">
+			<text><![CDATA[Glintt Global]]></text>
+		</element>
+		<element kind="staticText" uuid="6c979efe-6815-477d-bce2-6a86884dbeee" mode="Opaque" x="60" y="0" width="549" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[El valor total de la solución propuesta es]]></text>
+			<box>
+				<topPen lineWidth="1.0"/>
+				<leftPen lineWidth="1.0"/>
+				<bottomPen lineWidth="1.0"/>
+				<rightPen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="a67896d1-ce12-41b9-84d6-5bbaf7db2d3d" x="610" y="0" width="100" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$V{total_month1}]]></expression>
+			<box>
+				<topPen lineWidth="1.0"/>
+				<leftPen lineWidth="1.0"/>
+				<bottomPen lineWidth="1.0"/>
+				<rightPen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="de7b8481-7bc8-4b0a-8167-aaed9ae6b252" x="20" y="40" width="710" height="50" fontSize="10.0" hTextAlign="Justified">
+			<text><![CDATA[Una vez iniciado el servicio, las modificaciones de común acuerdo que sean adicionadas, podrán dar lugar al cambio, en cualquier sentido, del nivel de esfuerzo exigible, y en consecuencia correspondiente a la modificación de los valores indicados. En virtud de esta propuesta, GLINTT NEXT podrá referir al Cliente como Cliente GLINTT NEXT y también referir el proyecto adjudicado, en acciones e iniciativas de Marketing y Comunicación.]]></text>
+		</element>
+	</summary>
+</jasperReport>

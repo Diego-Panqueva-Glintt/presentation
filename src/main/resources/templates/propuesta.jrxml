@@ -1,0 +1,169 @@
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="propuesta" language="java" columnCount="1" pageWidth="842" pageHeight="595" whenNoDataType="AllSectionsNoDetail" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6a8a9a29-5d37-47cf-a96d-f72b0c4ae338">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="postgresql.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="net.sf.jasperreports.data.adapter" value="postgresql.jrdax"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="P_TITLE_DUMMY" forPrompting="false" class="java.lang.String"/>
+	<parameter name="P_AUTOR" forPrompting="false" class="java.lang.String"/>
+	<parameter name="P_REF_DOC" forPrompting="false" class="java.lang.String"/>
+	<parameter name="P_REF_DOC_VERSION" forPrompting="false" class="java.lang.String"/>
+	<query language="sql"><![CDATA[select * from dual]]></query>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dual"/>
+	</field>
+	<field name="dual" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dual"/>
+		<property name="com.jaspersoft.studio.field.label" value="dual"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dual"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="305" splitType="Stretch">
+		<element kind="textField" uuid="b20d5fe3-0407-45da-b85e-a069836d2179" mode="Opaque" x="0" y="0" width="842" height="30" forecolor="#AD80D0" backcolor="#CDC6CF" fontSize="12.0" vTextAlign="Middle">
+			<paragraph lineSpacingSize="0.0" leftIndent="20"/>
+			<expression><![CDATA[$P{P_TITLE_DUMMY}]]></expression>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+		</element>
+		<element kind="staticText" uuid="f5ba39a6-7d45-41c4-ba49-2a926322d4a6" mode="Opaque" x="10" y="60" width="360" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" vTextAlign="Middle">
+			<paragraph leftIndent="5"/>
+			<text><![CDATA[Referencias a otros documentos]]></text>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+		</element>
+		<element kind="staticText" uuid="71f920a6-e56e-4bf4-9e9a-2fdfda0fec42" mode="Opaque" x="420" y="60" width="360" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" vTextAlign="Middle">
+			<paragraph leftIndent="5"/>
+			<text><![CDATA[Autores]]></text>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+		</element>
+		<element kind="staticText" uuid="b15855b2-281c-4586-9526-633bc12d6246" mode="Opaque" x="13" y="193" width="360" height="30" forecolor="#FFFFFF" backcolor="#AD80D0" fontSize="13.0" vTextAlign="Middle">
+			<paragraph leftIndent="5"/>
+			<text><![CDATA[Registro de revisiones]]></text>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+		</element>
+		<element kind="staticText" uuid="4b0bbf78-0952-4272-8856-495f6961094d" x="10" y="90" width="150" height="30" forecolor="#AD80D0" fontSize="13.0" vTextAlign="Middle">
+			<text><![CDATA[Documentos]]></text>
+			<box bottomPadding="2"/>
+		</element>
+		<element kind="staticText" uuid="410fa72c-1865-4ae8-8e98-d24727047737" x="160" y="90" width="110" height="30" forecolor="#AD80D0" fontSize="13.0" vTextAlign="Middle">
+			<text><![CDATA[Versión]]></text>
+			<box padding="0"/>
+		</element>
+		<element kind="staticText" uuid="6aea55ad-b533-406b-8b15-925b31a7fd4d" x="270" y="90" width="100" height="30" forecolor="#AD80D0" fontSize="13.0" vTextAlign="Middle">
+			<text><![CDATA[Autor]]></text>
+			<box padding="0"/>
+		</element>
+		<element kind="staticText" uuid="055258a2-f4c8-428e-873a-fdd8c33afd54" x="420" y="90" width="150" height="30" forecolor="#AD80D0" fontSize="13.0" vTextAlign="Middle">
+			<text><![CDATA[Nombre]]></text>
+			<box bottomPadding="2"/>
+		</element>
+		<element kind="staticText" uuid="1ca00460-8fdf-45a4-9acf-0ce131a3e133" x="570" y="90" width="110" height="30" forecolor="#AD80D0" fontSize="13.0" vTextAlign="Middle">
+			<text><![CDATA[Función]]></text>
+			<box padding="0"/>
+		</element>
+		<element kind="staticText" uuid="3e0f56d5-35e4-44f6-a12b-821f2ca9b1b4" x="680" y="90" width="100" height="30" forecolor="#AD80D0" fontSize="13.0" vTextAlign="Middle">
+			<text><![CDATA[Área]]></text>
+			<box padding="0"/>
+		</element>
+		<element kind="staticText" uuid="543b6e58-e6c3-423b-aac4-1678b7ac2756" x="13" y="223" width="207" height="30" forecolor="#AD80D0" fontSize="13.0" vTextAlign="Middle">
+			<text><![CDATA[Documentos]]></text>
+			<box bottomPadding="2"/>
+		</element>
+		<element kind="staticText" uuid="43ab0086-5d73-4067-b655-ca7db995e02a" x="220" y="223" width="153" height="30" forecolor="#AD80D0" fontSize="13.0" vTextAlign="Middle">
+			<text><![CDATA[Autor]]></text>
+			<box padding="0"/>
+		</element>
+		<element kind="staticText" uuid="b76cc588-a9de-4009-8753-1bb332b5e024" x="13" y="253" width="207" height="30" vTextAlign="Middle">
+			<text><![CDATA[Versión inicial, V1.0]]></text>
+		</element>
+		<element kind="textField" uuid="cbb1a038-9b48-44b1-8afe-3027401ef573" x="220" y="253" width="153" height="30" vTextAlign="Middle">
+			<paragraph leftIndent="5"/>
+			<expression><![CDATA[$P{P_AUTOR}]]></expression>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+		</element>
+		<element kind="staticText" uuid="897897f6-7a4c-4cb3-ba2d-3318fb9bc77d" x="730" y="0" width="100" height="30" forecolor="#AD80D0" fontSize="15.0" vTextAlign="Middle">
+			<text><![CDATA[Glintt Next]]></text>
+		</element>
+		<element kind="staticText" uuid="dc71f9e4-5c75-4a61-8e17-f3dee46d8a38" x="420" y="120" width="150" height="30" fontSize="12.0" vTextAlign="Middle">
+			<paragraph leftIndent="5"/>
+			<text><![CDATA[Juan García Anguita]]></text>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+			<box>
+				<bottomPen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="8aba900f-0750-4aac-9e96-dcbb923fcefe" x="570" y="120" width="110" height="30" fontSize="12.0" vTextAlign="Middle">
+			<paragraph leftIndent="5"/>
+			<text><![CDATA[PA]]></text>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+			<box>
+				<bottomPen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="b2123320-457b-4579-8324-3cb26445aa39" x="680" y="120" width="100" height="30" fontSize="12.0" vTextAlign="Middle">
+			<paragraph leftIndent="5"/>
+			<text><![CDATA[Glintt Next]]></text>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+			<box>
+				<bottomPen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="805784e5-0a7e-4a8e-90c0-d79ff6518b24" x="420" y="150" width="150" height="30" fontSize="12.0" vTextAlign="Middle">
+			<paragraph leftIndent="5"/>
+			<text><![CDATA[Gabriel Pazos]]></text>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+			<box>
+				<bottomPen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="57fa6d75-15ae-4b0a-b703-adc17662e687" x="570" y="150" width="110" height="30" fontSize="12.0" vTextAlign="Middle">
+			<paragraph leftIndent="5"/>
+			<text><![CDATA[Country Manager]]></text>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+			<box>
+				<bottomPen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="a1b4d0f2-1458-4293-87af-314205c6d7ce" x="680" y="150" width="100" height="30" fontSize="12.0" vTextAlign="Middle">
+			<paragraph leftIndent="5"/>
+			<text><![CDATA[Glintt Next]]></text>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+			<box>
+				<bottomPen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="71af4000-5499-4fdb-af6b-89c10036bf9f" x="270" y="120" width="100" height="30" vTextAlign="Middle">
+			<paragraph leftIndent="5"/>
+			<expression><![CDATA[$P{P_AUTOR}]]></expression>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+		</element>
+		<element kind="textField" uuid="75e5149b-5a31-4813-a081-ff1e1d050cff" x="10" y="120" width="150" height="30" vTextAlign="Middle">
+			<paragraph leftIndent="5"/>
+			<expression><![CDATA[$P{P_REF_DOC}]]></expression>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+		</element>
+		<element kind="textField" uuid="145e01f1-9b44-438d-9a07-3f4fcf8b05cb" x="160" y="120" width="110" height="30" vTextAlign="Middle">
+			<expression><![CDATA[$P{P_REF_DOC_VERSION}]]></expression>
+		</element>
+	</title>
+	<summary height="138" splitType="Stretch">
+		<element kind="staticText" uuid="ddbc7e34-ada6-47d0-8d27-ddce9fa60606" x="20" y="5" width="766" height="100">
+			<text><![CDATA[El contenido de este documento está clasificado como "CONFIDENCIAL", y su consulta está autorizada únicamente a GLINTT NEXT y al CLIENTE. Al consultar el contenido de este documento, el CLIENTE se compromete dentro de los límites de la ley a no revelar a terceros ninguna información contenida en el mismo, así como a no duplicar, utilizar o ceder información para otros fines que no sean su evaluación. 
+
+La información clasificada como "CONFIDENCIAL" en este documento no incluye información de dominio público o accesible al público en general. 
+
+El uso de la información clasificada como "CONFIDENCIAL" para fines no autorizados por esta noticia requiere el consentimiento por escrito de GLINTT NEXT]]></text>
+		</element>
+		<element kind="staticText" uuid="70b4c846-b48e-481d-87fb-45d4751fb080" x="730" y="100" width="100" height="30" fontSize="15.0" vTextAlign="Middle">
+			<text><![CDATA[Glintt Global]]></text>
+		</element>
+	</summary>
+</jasperReport>

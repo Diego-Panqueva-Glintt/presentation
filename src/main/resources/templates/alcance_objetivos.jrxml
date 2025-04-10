@@ -1,0 +1,95 @@
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="alcance_objetivos" language="java" columnCount="1" pageWidth="842" pageHeight="595" whenNoDataType="AllSectionsNoDetail" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="b7721874-bdc0-42f4-abfe-9ed2f231398e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="postgresql.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="P_TITLE_DUMMY" forPrompting="false" class="java.lang.String"/>
+	<parameter name="P_DIFF" forPrompting="false" class="java.lang.String"/>
+	<query language="sql"><![CDATA[select 
+*
+from scope_objective so
+inner join items i on (so.items_code = i.code)
+where so.items_code = 'SCOPE1' ]]></query>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="scope_objective"/>
+	</field>
+	<field name="project_scope" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="project_scope"/>
+		<property name="com.jaspersoft.studio.field.label" value="project_scope"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="scope_objective"/>
+	</field>
+	<field name="proffesion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="proffesion"/>
+		<property name="com.jaspersoft.studio.field.label" value="proffesion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="scope_objective"/>
+	</field>
+	<field name="q_time" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="q_time"/>
+		<property name="com.jaspersoft.studio.field.label" value="q_time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="scope_objective"/>
+	</field>
+	<field name="items_code" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="items_code"/>
+		<property name="com.jaspersoft.studio.field.label" value="items_code"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="scope_objective"/>
+	</field>
+	<field name="COLUMN_6" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="items"/>
+	</field>
+	<field name="code" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="code"/>
+		<property name="com.jaspersoft.studio.field.label" value="code"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="items"/>
+	</field>
+	<field name="description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="description"/>
+		<property name="com.jaspersoft.studio.field.label" value="description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="items"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="260" splitType="Stretch">
+		<element kind="textField" uuid="4eb7c83c-56c2-4c02-8343-1a352bc9b89e" mode="Opaque" x="0" y="0" width="842" height="30" forecolor="#AD80D0" backcolor="#CDC6CF" fontSize="12.0" vTextAlign="Middle">
+			<paragraph lineSpacingSize="0.0" leftIndent="20"/>
+			<expression><![CDATA[$P{P_TITLE_DUMMY}]]></expression>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+		</element>
+		<element kind="staticText" uuid="f05fb8d2-a908-479b-abcd-3df0696c3d28" x="730" y="0" width="100" height="30" forecolor="#AD80D0" fontSize="15.0" vTextAlign="Middle">
+			<text><![CDATA[Glintt Next]]></text>
+		</element>
+		<element kind="textField" uuid="08dd8e14-5332-4a86-96a4-f2dece71a753" x="41" y="120" width="771" height="90" fontSize="12.0">
+			<paragraph leftIndent="5"/>
+			<expression><![CDATA[$F{project_scope}]]></expression>
+			<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+		</element>
+		<element kind="staticText" uuid="9a4c5605-9dad-4abc-9003-86971b293099" x="41" y="60" width="229" height="30" forecolor="#AD80D0" fontSize="18.0" vTextAlign="Middle">
+			<text><![CDATA[ALCANCE Y OBJETIVOS]]></text>
+		</element>
+		<element kind="staticText" uuid="01fcbeb6-da55-4512-949a-468d51cebbf9" x="40" y="220" width="340" height="30" fontSize="13.0">
+			<text><![CDATA[Estas características incluyen, pero no se limitan a:]]></text>
+		</element>
+	</title>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<element kind="textField" uuid="aaae6eea-579f-46c2-bfe4-8575b60b33df" x="40" y="0" width="772" height="30" vTextAlign="Middle">
+				<expression><![CDATA["(*)" + $F{description}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<summary height="242">
+		<element kind="staticText" uuid="48d96a98-72bd-4773-8505-8e101d0510a5" x="730" y="190" width="100" height="30" fontSize="15.0" vTextAlign="Middle">
+			<text><![CDATA[Glintt Global]]></text>
+		</element>
+	</summary>
+</jasperReport>

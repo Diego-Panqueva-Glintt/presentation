@@ -1,0 +1,32 @@
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="condiciones" language="java" columnCount="1" pageWidth="842" pageHeight="595" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="169d5cf8-9633-4cad-86f5-3e9dd9f470a7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<query language="sql"><![CDATA[]]></query>
+	<background height="595" splitType="Stretch">
+		<element kind="image" uuid="13086441-006a-4c4b-ba9a-8ae78d9d1c8c" x="0" y="0" width="842" height="595" scaleImage="FillFrame" printRepeatedValues="false">
+			<expression><![CDATA["condiciones.png"]]></expression>
+		</element>
+	</background>
+	<title height="344" splitType="Stretch">
+		<element kind="staticText" uuid="7d3fb333-dee3-4333-b034-769e6a4748c7" x="20" y="76" width="140" height="234" forecolor="#FFFFFF" fontSize="170.0" vTextAlign="Middle">
+			<text><![CDATA[3]]></text>
+		</element>
+		<element kind="staticText" uuid="84d27f91-21b7-4c05-84fd-c08a21114990" x="172" y="96" width="642" height="130" forecolor="#FFFFFF" fontSize="40.0" hTextAlign="Left" vTextAlign="Middle">
+			<text><![CDATA[CONDICIONES FINANCIERAS Y LEGALES PARTICULARES]]></text>
+		</element>
+		<element kind="staticText" uuid="1b7331cd-478f-4817-8057-e686b5ed14df" x="170" y="230" width="490" height="80" forecolor="#FFFFFF" fontSize="16.0">
+			<text><![CDATA[a) PRECIOS Y VALORES DE INVERSIÓN
+b) FACTURACIÓN Y PAGO
+c) OTRAS CONDICIONES]]></text>
+		</element>
+	</title>
+</jasperReport>
