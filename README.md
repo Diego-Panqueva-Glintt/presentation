@@ -22,9 +22,10 @@ Servicio para la gestión de presentaciones para ofrecer servicios tecnologicos 
 
 ## Requisitos Previos
 
-* Java 22
-* Maven 3.9.9
-* Docker Descktop
+* Java 22 -> https://www.youtube.com/watch?v=PQk9O03cukQ
+* Maven 3.9.9 -> https://www.youtube.com/watch?v=Ig87GMiGKn4
+* Docker Descktop -> https://www.youtube.com/watch?v=uDkf1fSPlYQ
+* Dbeaver -> https://dbeaver.io/download/
 
 ## Instalación
 
