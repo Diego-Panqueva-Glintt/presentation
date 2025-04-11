@@ -34,7 +34,7 @@ Servicio para la gestión de presentaciones para ofrecer servicios tecnologicos 
 ```bash
 git clone https://github.com/Diego-Panqueva-Glintt/presentation.git
 cd presentation
-mvn clean package
+mvn clean install
 ```
 
 
