@@ -157,6 +157,9 @@ create table dual(
 id serial primary key,
 dual varchar(20)
 );
+
+-- INSERT tabla de configuracion para los reportes
+insert into dual(dual) values('dual');
 ```
 
 **Importante: 
