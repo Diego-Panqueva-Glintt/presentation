@@ -158,7 +158,19 @@ dual varchar(20)
 )
 ```
 
+**Importante: 
+Los archivos de cargue se encuentran en la carpeta del proyecto (abrir con numbers(mac)  y/o con excel (windows) para luego exportar en csv SEPARADO POR ';' punto y coma):
+```bash
+cd presentation/src/main/resources/static/csv
 
+```
+
+
+Los reportes se encuentran en la ruta (Para hacer modificaciones es necesario instalar JaspertStudio):
+```bash
+cd presentation/src/main/resources/templates
+
+```
 
 ## Notas de Lanzamiento
 
